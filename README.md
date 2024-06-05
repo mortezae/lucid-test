@@ -1,5 +1,5 @@
-# test project using LucidCMS
-**A test project using [Lucid](https://lucidcms.io/) instance for **
+# Test project using LucidCMS
+**my testing [Lucid](https://lucidcms.io/) instance**
 
 ## Structure
 
