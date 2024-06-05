@@ -11,6 +11,7 @@
 │   ├── pages.js
 │   └── settings.js
 ├── db.sqlite
+├── .env
 ├── index.js
 ├── lucid.config.js
 ├── package.json
