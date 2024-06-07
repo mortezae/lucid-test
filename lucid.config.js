@@ -1,8 +1,12 @@
 import lucid, { PostgresAdapter, SQLiteAdapter, LibSQLAdapter } from '@lucidcms/core'
 import LucidLocalStorage from '@lucidcms/plugin-local-storage'
+import Database from 'better-sqlite3'
+
 import { SettingsCollection } from './collections/settings.js'
 import { PageCollection }     from './collections/pages.js'
 import { BlogCollection }     from './collections/blogs.js'
+
+import fs from 'node:fs'
 import 'dotenv/config'
 
 
@@ -21,6 +25,10 @@ export default lucid.config({
   /*
   db: new PostgresAdapter({
     url: process.env.POSTGRES_URL,
+    ssl: {
+      rejectUnauthorized: false,
+      ca: fs.readFileSync(process.env.NODE_EXTRA_CA_CERTS).toString(), // `ca` or `cert` ?  //for TypeORM: stackoverflow.com/a/56978040/3150964
+    },
   }),
   */
 
